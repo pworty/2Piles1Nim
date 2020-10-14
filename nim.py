@@ -7,8 +7,8 @@ multiply = int(input())
 results = [[0] * 2 * target for i in range(2 * target)]
 for x in range(target - 1, 0, -1):
     for y in range(target - x - 1, 0, -1):
-        nextCodes = [results[x + add][y], results[multiply * x][y], results[x][y + add],
-                     results[x][multiply * y]]
+        nextCodes = [results[x + add][y], results[multiply * x][y], 
+                     results[x][y + add], results[x][multiply * y]]
         negative = [c for c in nextCodes if c <= 0]
         if negative:
             results[x][y] = -max(negative) + 1
