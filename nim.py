@@ -14,6 +14,5 @@ for x in range(target - 1, 0, -1):
 
 # Answer  output
 print('\t' + ' '.join(list(map(lambda x: str(x).rjust(4, ' '), range(1, target - 1)))))
-# print('\n'.join(str(i) for i in results))
 
 print('\n'.join(str(index + 1) + '\t' + ' '.join(list(map(lambda x: ('В' + str(x)).rjust(4, ' ') if x > 0 else ('П' + str(x)).replace('-', '').rjust(4, ' '), i[1:target - 1]))) for index, i in enumerate(results[1:target - 1])))
